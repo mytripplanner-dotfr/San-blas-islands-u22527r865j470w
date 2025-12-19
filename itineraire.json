@@ -1,0 +1,395 @@
+{
+  "pays": "Panama",
+  "drapeau": "🇵🇦",
+  "symbole": "🌴",
+  "titre": "Évasion Turquoise aux Îles San Blas",
+  "budget_total": "3800€/pers",
+  "duree": "13 jours",
+  "temps_vol": "Environ 10-14h depuis Mauriceville, États-Unis avec escales",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Panama City",
+      "legende": "Après un long voyage depuis Mauriceville, vous atterrissez à Panama City. Cette première journée est dédiée à une installation en douceur et à une première immersion dans l'ambiance vibrante de la capitale panaméenne. Profitez de la soirée pour vous détendre et vous préparer aux aventures à venir.",
+      "lieu": "Panama City",
+      "activites": [
+        "🛬 <strong>Arrivée et transfert à l'hôtel</strong>: Après votre vol, un chauffeur vous attendra pour vous conduire à votre hôtel 3 étoiles dans le quartier moderne de la ville. Prenez le temps de vous installer et de vous rafraîchir.",
+        "🚶‍♂️ <strong>Balade légère dans les environs de l'hôtel</strong>: Profitez de la fin d'après-midi pour une promenade décontractée autour de votre hébergement. Découvrez les premières impressions de Panama City, ses gratte-ciel et son atmosphère animée."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le fuseau horaire peut nécessiter un temps d'adaptation. Hydratez-vous bien et reposez-vous pour éviter le décalage horaire."
+        },
+        {
+          "symbole": "🚕",
+          "titre": "Transport",
+          "texte": "Les taxis et applications de VTC comme Uber sont très pratiques et abordables pour se déplacer en ville."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🚤",
+      "titre": "Cap sur les Îles San Blas",
+      "legende": "Aujourd'hui marque le début de votre véritable évasion vers les paradisiaques îles San Blas. Préparez-vous à une journée de transition entre la ville et la nature sauvage, avec un trajet en 4x4 suivi d'une traversée en bateau. L'aventure commence dès le lever du soleil!",
+      "lieu": "Cartí (San Blas)",
+      "activites": [
+        "🚗 <strong>Transfert en 4x4 vers Cartí</strong>: Tôt le matin, un 4x4 viendra vous chercher à votre hôtel pour un trajet d'environ 3 heures à travers la jungle jusqu'au port de Cartí, porte d'entrée des San Blas. Admirez les paysages changeants du Panama.",
+        "⛵ <strong>Traversée en lancha vers votre île</strong>: Depuis Cartí, embarquez à bord d'une \"lancha\" (petit bateau à moteur) pour une courte traversée vers l'une des îles Guna Yala. L'eau turquoise et les palmiers vous accueilleront pour un dépaysement total.",
+        "🏝️ <strong>Installation et première baignade</strong>: Une fois sur votre île, installez-vous dans votre cabane rustique mais confortable. Profitez immédiatement de la plage immaculée pour une première baignade rafraîchissante dans les eaux cristallines."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "🎒",
+          "titre": "Bagages",
+          "texte": "Prévoyez un petit sac à dos pour les San Blas, les valises rigides sont difficiles à transporter dans les lanchas. Laissez le reste de vos affaires à l'hôtel à Panama City si possible."
+        },
+        {
+          "symbole": "💰",
+          "titre": "Argent",
+          "texte": "Les îles San Blas fonctionnent uniquement en espèces. Prévoyez suffisamment de dollars américains pour les dépenses personnelles et les taxes d'entrée."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🐠",
+      "titre": "Exploration sous-marine et île aux étoiles de mer",
+      "legende": "Plongez au cœur de la beauté naturelle des San Blas. Cette journée est dédiée à la découverte des fonds marins colorés et à la détente sur des bancs de sable isolés, véritables piscines naturelles. Une immersion totale dans un aquarium géant à ciel ouvert.",
+      "lieu": "Îles San Blas",
+      "activites": [
+        "🐠 <strong>Snorkeling dans les récifs coralliens</strong>: Partez en bateau pour explorer des spots de snorkeling incroyables, où vous nagerez au milieu de poissons tropicaux multicolores et de coraux vibrants. Une expérience inoubliable pour les amoureux de la vie marine.",
+        "⭐ <strong>Visite de l'île aux étoiles de mer (Cayo Holandés)</strong>: Détendez-vous sur un banc de sable immaculé, célèbre pour ses étoiles de mer géantes. C'est l'endroit idéal pour prendre des photos et profiter du calme absolu, en respectant la faune marine."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🧴",
+          "titre": "Protection solaire",
+          "texte": "Le soleil est très fort aux San Blas. Utilisez une crème solaire biodégradable pour protéger les coraux et portez un chapeau et des lunettes de soleil."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Équipement",
+          "texte": "N'oubliez pas votre appareil photo étanche ou une pochette de protection pour immortaliser ces moments magiques sous l'eau."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🛶",
+      "titre": "Immersion culturelle Guna et île paradisiaque",
+      "legende": "Aujourd'hui, vous aurez l'opportunité unique de vous connecter avec la culture Guna Yala, les gardiens de ces îles. Découvrez leur mode de vie traditionnel avant de vous évader vers une autre île idyllique pour un après-midi de pure détente. Une journée riche en découvertes humaines et naturelles.",
+      "lieu": "Îles San Blas",
+      "activites": [
+        "🛖 <strong>Visite d'un village Guna Yala</strong>: Rencontrez les habitants de l'archipel, découvrez leurs coutumes, leur artisanat (les célèbres \"molas\") et leur organisation sociale unique. C'est une occasion précieuse d'apprendre sur leur autonomie et leur respect de la nature.",
+        "🏖️ <strong>Détente sur une île déserte</strong>: Après la visite culturelle, votre capitaine vous emmènera sur une petite île isolée, souvent sans personne d'autre. Profitez de la tranquillité, baignez-vous et savourez un pique-nique les pieds dans l'eau."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🤝",
+          "titre": "Respect culturel",
+          "texte": "Demandez toujours la permission avant de prendre des photos des Gunas, surtout des femmes. Acheter leur artisanat est un excellent moyen de soutenir leur économie locale."
+        },
+        {
+          "symbole": "🗣️",
+          "titre": "Langue",
+          "texte": "Les Gunas parlent le Guna et l'espagnol. Quelques mots d'espagnol seront appréciés, mais les guides locaux parlent souvent un peu d'anglais."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🎣",
+      "titre": "Pêche traditionnelle et saveurs locales",
+      "legende": "Expérimentez la vie insulaire à travers la pêche traditionnelle, une activité essentielle pour les Gunas. L'après-midi sera consacré à la dégustation des fruits de mer fraîchement pêchés et à la contemplation des paysages marins. Une journée authentique et gourmande.",
+      "lieu": "Îles San Blas",
+      "activites": [
+        "🎣 <strong>Initiation à la pêche Guna</strong>: Accompagnez un pêcheur Guna pour apprendre les techniques de pêche traditionnelles. Que vous attrapiez quelque chose ou non, l'expérience est enrichissante et vous connecte davantage à la vie locale.",
+        "🦞 <strong>Dégustation de fruits de mer frais</strong>: Savourez un déjeuner composé des prises du jour, souvent du poisson grillé, du homard ou des crevettes, préparés simplement mais délicieusement par vos hôtes Gunas. Un régal pour les papilles."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "💧",
+          "titre": "Eau potable",
+          "texte": "L'eau potable est limitée sur les îles. Pensez à apporter une gourde réutilisable et demandez à la remplir si possible, ou achetez de l'eau en bouteille."
+        },
+        {
+          "symbole": "💡",
+          "titre": "Électricité",
+          "texte": "L'électricité est souvent limitée ou inexistante sur certaines îles. Prévoyez une batterie externe pour recharger vos appareils."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🚶‍♀️",
+      "titre": "Randonnée insulaire et coucher de soleil",
+      "legende": "Aventurez-vous au-delà des plages pour explorer l'intérieur d'une île plus grande, découvrant sa flore et sa faune. La journée se terminera par un spectacle naturel inoubliable: un coucher de soleil flamboyant sur l'océan, un moment de pure magie.",
+      "lieu": "Îles San Blas",
+      "activites": [
+        "🌿 <strong>Petite randonnée sur une île boisée</strong>: Explorez les sentiers intérieurs d'une île plus vaste, comme Isla Perro Grande, pour découvrir une végétation luxuriante et peut-être observer quelques oiseaux tropicaux. Une autre facette des San Blas.",
+        "🌅 <strong>Coucher de soleil sur l'océan</strong>: Trouvez le spot parfait sur votre île ou une île voisine pour admirer le soleil se fondre dans l'horizon, peignant le ciel de couleurs chaudes. Un moment de sérénité absolue."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Chaussures",
+          "texte": "Des sandales de marche ou des chaussures d'eau sont idéales pour les déplacements sur les îles et dans les bateaux."
+        },
+        {
+          "symbole": "🦟",
+          "titre": "Moustiques",
+          "texte": "Prévoyez un bon répulsif, surtout en fin de journée et le soir, car les moustiques peuvent être présents."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🧘‍♀️",
+      "titre": "Journée de détente et farniente",
+      "legende": "Après plusieurs jours d'exploration, cette journée est dédiée au repos et à la relaxation. Laissez-vous bercer par le rythme lent des îles, profitez du soleil, de la mer et du sable fin. Une pause bien méritée pour recharger les batteries.",
+      "lieu": "Îles San Blas",
+      "activites": [
+        "🏖️ <strong>Farniente sur la plage</strong>: Passez la journée à vous prélasser sur le sable blanc, à lire un livre à l'ombre d'un palmier ou simplement à écouter le bruit des vagues. Laissez le temps s'écouler sans contrainte.",
+        "🏊‍♀️ <strong>Baignade et jeux aquatiques</strong>: Profitez des eaux calmes et chaudes pour nager, faire de la plongée libre autour de votre île ou simplement vous rafraîchir. Les San Blas sont un terrain de jeu naturel."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "📚",
+          "titre": "Lecture",
+          "texte": "C'est le moment idéal pour emporter ce livre que vous n'avez jamais eu le temps de lire. Le cadre est parfait pour la lecture."
+        },
+        {
+          "symbole": "📵",
+          "titre": "Déconnexion",
+          "texte": "Profitez de la faible connectivité pour vous déconnecter des écrans et vous reconnecter à la nature et à vous-même."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "⛵",
+      "titre": "Navigation entre les îles et découverte de Cayo Limón",
+      "legende": "Embarquez pour une nouvelle aventure maritime, naviguant entre les innombrables îlots des San Blas. Vous découvrirez Cayo Limón, une île réputée pour sa beauté et ses eaux peu profondes, idéales pour la baignade et l'exploration. Une journée de pure carte postale.",
+      "lieu": "Îles San Blas",
+      "activites": [
+        "🚤 <strong>Excursion en bateau vers de nouvelles îles</strong>: Votre capitaine vous emmènera explorer d'autres joyaux cachés de l'archipel, vous offrant des vues imprenables sur les paysages marins. Chaque île a son propre charme.",
+        "🍋 <strong>Découverte de Cayo Limón</strong>: Passez l'après-midi sur Cayo Limón, une île magnifique avec des eaux cristallines et peu profondes, parfaite pour se détendre et profiter du soleil. C'est un lieu emblématique des San Blas."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Orientation",
+          "texte": "Bien que les îles semblent similaires, chaque île Guna a un nom et une histoire. N'hésitez pas à demander à votre guide de vous en dire plus."
+        },
+        {
+          "symbole": "🥥",
+          "titre": "Rafraîchissement",
+          "texte": "Sur certaines îles, vous pourrez acheter de l'eau de coco fraîche directement auprès des Gunas, un délice rafraîchissant."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🐢",
+      "titre": "San Blas secrètes et rencontre avec la faune",
+      "legende": "Aujourd'hui, l'accent est mis sur la découverte de recoins moins fréquentés des San Blas et la chance d'observer la faune locale. Une journée pour les explorateurs, à la recherche de la tranquillité et de la beauté cachée de l'archipel. Préparez-vous à être émerveillé.",
+      "lieu": "Îles San Blas",
+      "activites": [
+        "🐢 <strong>Exploration de spots de snorkeling isolés</strong>: Votre guide vous mènera vers des zones de récifs moins connues, où la vie marine est encore plus abondante et préservée. Peut-être aurez-vous la chance d'apercevoir des tortues marines.",
+        "🌴 <strong>Pique-nique sur un îlot vierge</strong>: Déjeunez sur un îlot totalement inhabité, entouré uniquement par la nature. C'est une expérience de Robinson Crusoé moderne, loin de toute civilisation."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "♻️",
+          "titre": "Environnement",
+          "texte": "Les Gunas sont très attachés à la préservation de leur environnement. Ne laissez aucun déchet derrière vous et ramassez même ceux que vous pourriez trouver."
+        },
+        {
+          "symbole": "🤫",
+          "titre": "Tranquillité",
+          "texte": "Pour profiter pleinement de la sérénité des lieux, essayez de vous lever tôt pour admirer le lever du soleil sur l'océan."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "👋",
+      "titre": "Derniers instants paradisiaques",
+      "legende": "Profitez de cette dernière journée complète aux San Blas pour savourer chaque instant. Que ce soit par une dernière baignade, une promenade méditative ou simplement en contemplant l'horizon, imprégnez-vous de la magie de ces îles avant de les quitter. Une journée pour faire le plein de souvenirs.",
+      "lieu": "Îles San Blas",
+      "activites": [
+        "🚶‍♀️ <strong>Promenade matinale et baignade</strong>: Profitez des premières heures de la journée pour une dernière promenade le long de la plage et une baignade rafraîchissante dans les eaux calmes. C'est le moment de dire au revoir à ce paradis.",
+        "📸 <strong>Séance photo souvenir</strong>: Immortalisez les paysages époustouflants et les moments passés avec les Gunas. Ces photos seront de précieux souvenirs de votre voyage aux San Blas."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Si vous n'avez pas encore acheté de \"mola\", c'est la dernière occasion de le faire directement auprès des artisans Gunas."
+        },
+        {
+          "symbole": "💖",
+          "titre": "Gratitude",
+          "texte": "Remerciez vos hôtes Gunas pour leur hospitalité et leur partage de leur culture. Un simple \"Gracias\" sera très apprécié."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🏙️",
+      "titre": "Retour à Panama City et détente urbaine",
+      "legende": "Après avoir quitté les îles paradisiaques, vous retrouverez l'effervescence de Panama City. Cette journée de transition vous permettra de vous réadapter à la vie urbaine, de vous reposer et de profiter des commodités de la ville. Une soirée tranquille pour se remettre du voyage.",
+      "lieu": "Panama City",
+      "activites": [
+        "🚗 <strong>Retour de San Blas à Panama City</strong>: Le matin, vous reprendrez la lancha puis le 4x4 pour retourner à Panama City. Le trajet est l'occasion de repenser aux merveilles des San Blas.",
+        "🛏️ <strong>Installation à l'hôtel et repos</strong>: Une fois de retour en ville, installez-vous dans votre hôtel 3 étoiles. Profitez du confort moderne, d'une bonne douche et d'un moment de repos bien mérité après l'aventure insulaire."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "🚿",
+          "titre": "Confort",
+          "texte": "Profitez des commodités de l'hôtel, comme l'eau chaude et l'électricité constante, qui peuvent manquer aux San Blas."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Repas",
+          "texte": "Explorez les options de restaurants à proximité de votre hôtel pour un dîner varié et savoureux."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🚢",
+      "titre": "Merveilles du Canal et charme du Casco Viejo",
+      "legende": "Découvrez les deux facettes emblématiques de Panama City: l'ingénierie colossale du Canal de Panama et le charme historique du Casco Viejo. Une journée riche en histoire, culture et architecture, offrant un contraste saisissant avec la nature des San Blas.",
+      "lieu": "Panama City",
+      "activites": [
+        "🚢 <strong>Visite du Canal de Panama (Miraflores Locks)</strong>: Assistez au passage des navires géants à travers les écluses de Miraflores, un exploit d'ingénierie mondialement connu. Le centre d'accueil offre des expositions fascinantes sur l'histoire et le fonctionnement du Canal.",
+        "🚶‍♂️ <strong>Exploration du Casco Viejo</strong>: Flânez dans les rues pavées du quartier historique, classé au patrimoine mondial de l'UNESCO. Admirez l'architecture coloniale, visitez les églises et profitez de l'ambiance bohème des places animées."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Meilleur moment",
+          "texte": "Pour voir le plus de navires au Canal, visitez les écluses de Miraflores tôt le matin (vers 9h) ou en fin d'après-midi (vers 15h)."
+        },
+        {
+          "symbole": "🛍️",
+          "titre": "Artisanat",
+          "texte": "Le Casco Viejo regorge de boutiques d'artisanat local et de galeries d'art, parfait pour trouver des souvenirs uniques."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🛫",
+      "titre": "Départ de Panama City",
+      "legende": "C'est le dernier jour de votre incroyable voyage. Après un petit-déjeuner tranquille, il sera temps de vous diriger vers l'aéroport pour votre vol de retour. Emportez avec vous des souvenirs inoubliables des plages paradisiaques des San Blas et de la vibrante Panama City.",
+      "lieu": "Panama City",
+      "activites": [
+        "🥞 <strong>Petit-déjeuner et derniers achats</strong>: Profitez d'un dernier petit-déjeuner panaméen. Si le temps le permet, faites quelques derniers achats de souvenirs ou de café local.",
+        "🛫 <strong>Transfert à l'aéroport et vol retour</strong>: Un transfert vous conduira à l'aéroport international de Tocumen (PTY) pour votre vol de retour vers Mauriceville, États-Unis, la tête pleine de souvenirs."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "✈️",
+          "titre": "Enregistrement",
+          "texte": "Arrivez à l'aéroport au moins 3 heures avant votre vol international pour les formalités d'enregistrement et de sécurité."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Détaxe",
+          "texte": "Renseignez-vous sur les possibilités de détaxe pour les achats effectués au Panama si vous êtes éligible."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "900€/pers (Vol A/R Mauriceville - Panama City en classe économique avec escales)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "250€/pers (Transferts aéroport, 4x4 + lancha A/R San Blas, transports locaux à Panama City)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "650€/pers (Repas inclus aux San Blas, repas variés à Panama City, environ 50€/jour)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "1200€/pers (10 nuits en cabane confortable aux San Blas avec repas, 2 nuits en hôtel 3* à Panama City)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "800€/pers (Excursions quotidiennes aux San Blas, snorkeling, visites culturelles, entrée Canal de Panama)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de décembre à avril, pendant la saison sèche.",
+      "symbole": "☀️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Les îles San Blas sont un territoire autonome géré par le peuple indigène Guna Yala. Leur culture est riche et leur autonomie est respectée par le gouvernement panaméen.",
+      "symbole": "🛖"
+    },
+    {
+      "titre": "Le Panama est un pays d'Amérique Centrale, connu pour son canal, sa biodiversité et ses cultures indigènes. La monnaie est le Balboa panaméen (PAB), indexé sur le dollar américain (USD), qui est largement accepté.",
+      "symbole": "🇵🇦"
+    },
+    {
+      "titre": "Aux San Blas, l'hébergement est rustique (cabanes en bois ou bambou, souvent sans électricité ni eau chaude). C'est une expérience authentique, loin du luxe des resorts. Prévoyez une lampe frontale et des lingettes.",
+      "symbole": "💡"
+    },
+    {
+      "titre": "Une taxe d'entrée est requise pour accéder au territoire Guna Yala (environ 20-25 USD par personne, à payer en espèces).",
+      "symbole": "💰"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur le tourisme au Panama",
+      "titre": "Visit Panama",
+      "url": "https://www.visitpanama.com/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Informations sur le Canal de Panama",
+      "titre": "Autorité du Canal de Panama",
+      "url": "https://www.pancanal.com/fr/",
+      "symbole": "🚢"
+    },
+    {
+      "legende": "Prévisions météo pour Panama City",
+      "titre": "AccuWeather Panama City",
+      "url": "https://www.accuweather.com/fr/pa/panama-city/28229/weather-forecast/28229",
+      "symbole": "🌤️"
+    }
+  ]
+}
