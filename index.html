@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évasion Turquoise aux Îles San Blas </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Panama City</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Cap sur les Îles San Blas</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Exploration sous-marine et île aux étoiles de mer</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Immersion culturelle Guna et île paradisiaque</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Pêche traditionnelle et saveurs locales</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Randonnée insulaire et coucher de soleil</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Journée de détente et farniente</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Navigation entre les îles et découverte de Cayo Limón</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 San Blas secrètes et rencontre avec la faune</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Derniers instants paradisiaques</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Retour à Panama City et détente urbaine</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Merveilles du Canal et charme du Casco Viejo</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Départ de Panama City</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">SAN BLAS ISLANDS</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Évasion Turquoise aux Îles San Blas</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 13 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 3800€/pers</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 Environ 10-14h depuis Mauriceville, États-Unis avec escales</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Panama City</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage depuis Mauriceville, vous atterrissez à Panama City. Cette première journée est dédiée à une installation en douceur et à une première immersion dans l'ambiance vibrante de la capitale panaméenne. Profitez de la soirée pour vous détendre et vous préparer aux aventures à venir.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée et transfert à l'hôtel</strong>: Après votre vol, un chauffeur vous attendra pour vous conduire à votre hôtel 3 étoiles dans le quartier moderne de la ville. Prenez le temps de vous installer et de vous rafraîchir.</li><li>🚶‍♂️ <strong>Balade légère dans les environs de l'hôtel</strong>: Profitez de la fin d'après-midi pour une promenade décontractée autour de votre hébergement. Découvrez les premières impressions de Panama City, ses gratte-ciel et son atmosphère animée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le fuseau horaire peut nécessiter un temps d'adaptation. Hydratez-vous bien et reposez-vous pour éviter le décalage horaire.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚕 Transport</p>
+                                <p class="text-gray-700">Les taxis et applications de VTC comme Uber sont très pratiques et abordables pour se déplacer en ville.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cap sur les Îles San Blas</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui marque le début de votre véritable évasion vers les paradisiaques îles San Blas. Préparez-vous à une journée de transition entre la ville et la nature sauvage, avec un trajet en 4x4 suivi d'une traversée en bateau. L'aventure commence dès le lever du soleil!</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Transfert en 4x4 vers Cartí</strong>: Tôt le matin, un 4x4 viendra vous chercher à votre hôtel pour un trajet d'environ 3 heures à travers la jungle jusqu'au port de Cartí, porte d'entrée des San Blas. Admirez les paysages changeants du Panama.</li><li>⛵ <strong>Traversée en lancha vers votre île</strong>: Depuis Cartí, embarquez à bord d'une "lancha" (petit bateau à moteur) pour une courte traversée vers l'une des îles Guna Yala. L'eau turquoise et les palmiers vous accueilleront pour un dépaysement total.</li><li>🏝️ <strong>Installation et première baignade</strong>: Une fois sur votre île, installez-vous dans votre cabane rustique mais confortable. Profitez immédiatement de la plage immaculée pour une première baignade rafraîchissante dans les eaux cristallines.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎒 Bagages</p>
+                                <p class="text-gray-700">Prévoyez un petit sac à dos pour les San Blas, les valises rigides sont difficiles à transporter dans les lanchas. Laissez le reste de vos affaires à l'hôtel à Panama City si possible.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Argent</p>
+                                <p class="text-gray-700">Les îles San Blas fonctionnent uniquement en espèces. Prévoyez suffisamment de dollars américains pour les dépenses personnelles et les taxes d'entrée.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Exploration sous-marine et île aux étoiles de mer</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez au cœur de la beauté naturelle des San Blas. Cette journée est dédiée à la découverte des fonds marins colorés et à la détente sur des bancs de sable isolés, véritables piscines naturelles. Une immersion totale dans un aquarium géant à ciel ouvert.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🐠 <strong>Snorkeling dans les récifs coralliens</strong>: Partez en bateau pour explorer des spots de snorkeling incroyables, où vous nagerez au milieu de poissons tropicaux multicolores et de coraux vibrants. Une expérience inoubliable pour les amoureux de la vie marine.</li><li>⭐ <strong>Visite de l'île aux étoiles de mer (Cayo Holandés)</strong>: Détendez-vous sur un banc de sable immaculé, célèbre pour ses étoiles de mer géantes. C'est l'endroit idéal pour prendre des photos et profiter du calme absolu, en respectant la faune marine.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧴 Protection solaire</p>
+                                <p class="text-gray-700">Le soleil est très fort aux San Blas. Utilisez une crème solaire biodégradable pour protéger les coraux et portez un chapeau et des lunettes de soleil.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Équipement</p>
+                                <p class="text-gray-700">N'oubliez pas votre appareil photo étanche ou une pochette de protection pour immortaliser ces moments magiques sous l'eau.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion culturelle Guna et île paradisiaque</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, vous aurez l'opportunité unique de vous connecter avec la culture Guna Yala, les gardiens de ces îles. Découvrez leur mode de vie traditionnel avant de vous évader vers une autre île idyllique pour un après-midi de pure détente. Une journée riche en découvertes humaines et naturelles.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛖 <strong>Visite d'un village Guna Yala</strong>: Rencontrez les habitants de l'archipel, découvrez leurs coutumes, leur artisanat (les célèbres "molas") et leur organisation sociale unique. C'est une occasion précieuse d'apprendre sur leur autonomie et leur respect de la nature.</li><li>🏖️ <strong>Détente sur une île déserte</strong>: Après la visite culturelle, votre capitaine vous emmènera sur une petite île isolée, souvent sans personne d'autre. Profitez de la tranquillité, baignez-vous et savourez un pique-nique les pieds dans l'eau.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤝 Respect culturel</p>
+                                <p class="text-gray-700">Demandez toujours la permission avant de prendre des photos des Gunas, surtout des femmes. Acheter leur artisanat est un excellent moyen de soutenir leur économie locale.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langue</p>
+                                <p class="text-gray-700">Les Gunas parlent le Guna et l'espagnol. Quelques mots d'espagnol seront appréciés, mais les guides locaux parlent souvent un peu d'anglais.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pêche traditionnelle et saveurs locales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Expérimentez la vie insulaire à travers la pêche traditionnelle, une activité essentielle pour les Gunas. L'après-midi sera consacré à la dégustation des fruits de mer fraîchement pêchés et à la contemplation des paysages marins. Une journée authentique et gourmande.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎣 <strong>Initiation à la pêche Guna</strong>: Accompagnez un pêcheur Guna pour apprendre les techniques de pêche traditionnelles. Que vous attrapiez quelque chose ou non, l'expérience est enrichissante et vous connecte davantage à la vie locale.</li><li>🦞 <strong>Dégustation de fruits de mer frais</strong>: Savourez un déjeuner composé des prises du jour, souvent du poisson grillé, du homard ou des crevettes, préparés simplement mais délicieusement par vos hôtes Gunas. Un régal pour les papilles.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Eau potable</p>
+                                <p class="text-gray-700">L'eau potable est limitée sur les îles. Pensez à apporter une gourde réutilisable et demandez à la remplir si possible, ou achetez de l'eau en bouteille.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Électricité</p>
+                                <p class="text-gray-700">L'électricité est souvent limitée ou inexistante sur certaines îles. Prévoyez une batterie externe pour recharger vos appareils.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Randonnée insulaire et coucher de soleil</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aventurez-vous au-delà des plages pour explorer l'intérieur d'une île plus grande, découvrant sa flore et sa faune. La journée se terminera par un spectacle naturel inoubliable: un coucher de soleil flamboyant sur l'océan, un moment de pure magie.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌿 <strong>Petite randonnée sur une île boisée</strong>: Explorez les sentiers intérieurs d'une île plus vaste, comme Isla Perro Grande, pour découvrir une végétation luxuriante et peut-être observer quelques oiseaux tropicaux. Une autre facette des San Blas.</li><li>🌅 <strong>Coucher de soleil sur l'océan</strong>: Trouvez le spot parfait sur votre île ou une île voisine pour admirer le soleil se fondre dans l'horizon, peignant le ciel de couleurs chaudes. Un moment de sérénité absolue.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Chaussures</p>
+                                <p class="text-gray-700">Des sandales de marche ou des chaussures d'eau sont idéales pour les déplacements sur les îles et dans les bateaux.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦟 Moustiques</p>
+                                <p class="text-gray-700">Prévoyez un bon répulsif, surtout en fin de journée et le soir, car les moustiques peuvent être présents.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée de détente et farniente</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après plusieurs jours d'exploration, cette journée est dédiée au repos et à la relaxation. Laissez-vous bercer par le rythme lent des îles, profitez du soleil, de la mer et du sable fin. Une pause bien méritée pour recharger les batteries.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏖️ <strong>Farniente sur la plage</strong>: Passez la journée à vous prélasser sur le sable blanc, à lire un livre à l'ombre d'un palmier ou simplement à écouter le bruit des vagues. Laissez le temps s'écouler sans contrainte.</li><li>🏊‍♀️ <strong>Baignade et jeux aquatiques</strong>: Profitez des eaux calmes et chaudes pour nager, faire de la plongée libre autour de votre île ou simplement vous rafraîchir. Les San Blas sont un terrain de jeu naturel.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📚 Lecture</p>
+                                <p class="text-gray-700">C'est le moment idéal pour emporter ce livre que vous n'avez jamais eu le temps de lire. Le cadre est parfait pour la lecture.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📵 Déconnexion</p>
+                                <p class="text-gray-700">Profitez de la faible connectivité pour vous déconnecter des écrans et vous reconnecter à la nature et à vous-même.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Navigation entre les îles et découverte de Cayo Limón</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Embarquez pour une nouvelle aventure maritime, naviguant entre les innombrables îlots des San Blas. Vous découvrirez Cayo Limón, une île réputée pour sa beauté et ses eaux peu profondes, idéales pour la baignade et l'exploration. Une journée de pure carte postale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚤 <strong>Excursion en bateau vers de nouvelles îles</strong>: Votre capitaine vous emmènera explorer d'autres joyaux cachés de l'archipel, vous offrant des vues imprenables sur les paysages marins. Chaque île a son propre charme.</li><li>🍋 <strong>Découverte de Cayo Limón</strong>: Passez l'après-midi sur Cayo Limón, une île magnifique avec des eaux cristallines et peu profondes, parfaite pour se détendre et profiter du soleil. C'est un lieu emblématique des San Blas.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Orientation</p>
+                                <p class="text-gray-700">Bien que les îles semblent similaires, chaque île Guna a un nom et une histoire. N'hésitez pas à demander à votre guide de vous en dire plus.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥥 Rafraîchissement</p>
+                                <p class="text-gray-700">Sur certaines îles, vous pourrez acheter de l'eau de coco fraîche directement auprès des Gunas, un délice rafraîchissant.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">San Blas secrètes et rencontre avec la faune</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'accent est mis sur la découverte de recoins moins fréquentés des San Blas et la chance d'observer la faune locale. Une journée pour les explorateurs, à la recherche de la tranquillité et de la beauté cachée de l'archipel. Préparez-vous à être émerveillé.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🐢 <strong>Exploration de spots de snorkeling isolés</strong>: Votre guide vous mènera vers des zones de récifs moins connues, où la vie marine est encore plus abondante et préservée. Peut-être aurez-vous la chance d'apercevoir des tortues marines.</li><li>🌴 <strong>Pique-nique sur un îlot vierge</strong>: Déjeunez sur un îlot totalement inhabité, entouré uniquement par la nature. C'est une expérience de Robinson Crusoé moderne, loin de toute civilisation.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">♻️ Environnement</p>
+                                <p class="text-gray-700">Les Gunas sont très attachés à la préservation de leur environnement. Ne laissez aucun déchet derrière vous et ramassez même ceux que vous pourriez trouver.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤫 Tranquillité</p>
+                                <p class="text-gray-700">Pour profiter pleinement de la sérénité des lieux, essayez de vous lever tôt pour admirer le lever du soleil sur l'océan.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers instants paradisiaques</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée complète aux San Blas pour savourer chaque instant. Que ce soit par une dernière baignade, une promenade méditative ou simplement en contemplant l'horizon, imprégnez-vous de la magie de ces îles avant de les quitter. Une journée pour faire le plein de souvenirs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚶‍♀️ <strong>Promenade matinale et baignade</strong>: Profitez des premières heures de la journée pour une dernière promenade le long de la plage et une baignade rafraîchissante dans les eaux calmes. C'est le moment de dire au revoir à ce paradis.</li><li>📸 <strong>Séance photo souvenir</strong>: Immortalisez les paysages époustouflants et les moments passés avec les Gunas. Ces photos seront de précieux souvenirs de votre voyage aux San Blas.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Si vous n'avez pas encore acheté de "mola", c'est la dernière occasion de le faire directement auprès des artisans Gunas.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💖 Gratitude</p>
+                                <p class="text-gray-700">Remerciez vos hôtes Gunas pour leur hospitalité et leur partage de leur culture. Un simple "Gracias" sera très apprécié.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à Panama City et détente urbaine</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après avoir quitté les îles paradisiaques, vous retrouverez l'effervescence de Panama City. Cette journée de transition vous permettra de vous réadapter à la vie urbaine, de vous reposer et de profiter des commodités de la ville. Une soirée tranquille pour se remettre du voyage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Retour de San Blas à Panama City</strong>: Le matin, vous reprendrez la lancha puis le 4x4 pour retourner à Panama City. Le trajet est l'occasion de repenser aux merveilles des San Blas.</li><li>🛏️ <strong>Installation à l'hôtel et repos</strong>: Une fois de retour en ville, installez-vous dans votre hôtel 3 étoiles. Profitez du confort moderne, d'une bonne douche et d'un moment de repos bien mérité après l'aventure insulaire.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚿 Confort</p>
+                                <p class="text-gray-700">Profitez des commodités de l'hôtel, comme l'eau chaude et l'électricité constante, qui peuvent manquer aux San Blas.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Repas</p>
+                                <p class="text-gray-700">Explorez les options de restaurants à proximité de votre hôtel pour un dîner varié et savoureux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Merveilles du Canal et charme du Casco Viejo</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez les deux facettes emblématiques de Panama City: l'ingénierie colossale du Canal de Panama et le charme historique du Casco Viejo. Une journée riche en histoire, culture et architecture, offrant un contraste saisissant avec la nature des San Blas.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚢 <strong>Visite du Canal de Panama (Miraflores Locks)</strong>: Assistez au passage des navires géants à travers les écluses de Miraflores, un exploit d'ingénierie mondialement connu. Le centre d'accueil offre des expositions fascinantes sur l'histoire et le fonctionnement du Canal.</li><li>🚶‍♂️ <strong>Exploration du Casco Viejo</strong>: Flânez dans les rues pavées du quartier historique, classé au patrimoine mondial de l'UNESCO. Admirez l'architecture coloniale, visitez les églises et profitez de l'ambiance bohème des places animées.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Meilleur moment</p>
+                                <p class="text-gray-700">Pour voir le plus de navires au Canal, visitez les écluses de Miraflores tôt le matin (vers 9h) ou en fin d'après-midi (vers 15h).</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛍️ Artisanat</p>
+                                <p class="text-gray-700">Le Casco Viejo regorge de boutiques d'artisanat local et de galeries d'art, parfait pour trouver des souvenirs uniques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Panama City</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le dernier jour de votre incroyable voyage. Après un petit-déjeuner tranquille, il sera temps de vous diriger vers l'aéroport pour votre vol de retour. Emportez avec vous des souvenirs inoubliables des plages paradisiaques des San Blas et de la vibrante Panama City.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🥞 <strong>Petit-déjeuner et derniers achats</strong>: Profitez d'un dernier petit-déjeuner panaméen. Si le temps le permet, faites quelques derniers achats de souvenirs ou de café local.</li><li>🛫 <strong>Transfert à l'aéroport et vol retour</strong>: Un transfert vous conduira à l'aéroport international de Tocumen (PTY) pour votre vol de retour vers Mauriceville, États-Unis, la tête pleine de souvenirs.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/San-blas-islands-u22527r865j470w/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Enregistrement</p>
+                                <p class="text-gray-700">Arrivez à l'aéroport au moins 3 heures avant votre vol international pour les formalités d'enregistrement et de sécurité.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Détaxe</p>
+                                <p class="text-gray-700">Renseignez-vous sur les possibilités de détaxe pour les achats effectués au Panama si vous êtes éligible.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>900€/pers (Vol A/R Mauriceville - Panama City en classe économique avec escales)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>250€/pers (Transferts aéroport, 4x4 + lancha A/R San Blas, transports locaux à Panama City)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>650€/pers (Repas inclus aux San Blas, repas variés à Panama City, environ 50€/jour)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>1200€/pers (10 nuits en cabane confortable aux San Blas avec repas, 2 nuits en hôtel 3* à Panama City)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>800€/pers (Excursions quotidiennes aux San Blas, snorkeling, visites culturelles, entrée Canal de Panama)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de décembre à avril, pendant la saison sèche.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🛖 Les îles San Blas sont un territoire autonome géré par le peuple indigène Guna Yala. Leur culture est riche et leur autonomie est respectée par le gouvernement panaméen.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🇵🇦 Le Panama est un pays d'Amérique Centrale, connu pour son canal, sa biodiversité et ses cultures indigènes. La monnaie est le Balboa panaméen (PAB), indexé sur le dollar américain (USD), qui est largement accepté.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💡 Aux San Blas, l'hébergement est rustique (cabanes en bois ou bambou, souvent sans électricité ni eau chaude). C'est une expérience authentique, loin du luxe des resorts. Prévoyez une lampe frontale et des lingettes.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💰 Une taxe d'entrée est requise pour accéder au territoire Guna Yala (environ 20-25 USD par personne, à payer en espèces).</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/San-blas-islands-u22527r865j470w/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.visitpanama.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Visit Panama</strong></a></li>
+                    
+                        <li><a href="https://www.pancanal.com/fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚢 Autorité du Canal de Panama</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/pa/panama-city/28229/weather-forecast/28229" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ AccuWeather Panama City</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
